@@ -13,7 +13,10 @@ export async function getStaticProps() {
 export default function Estatico4(props) {
    function renderizarProdutos() {
       return props.produtos.map(produto => {
-         return <li key={produto.id}>{produto.nome} tem preço de R${produto.preco}</li>
+         return ( 
+            <li key={produto.id}>
+               {produto.id} - {produto.nome} tem preço de R${produto.preco}</li>
+         )
       })
    }
    
